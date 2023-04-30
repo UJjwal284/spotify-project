@@ -1,38 +1,82 @@
-.App {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    margin: 0 !important;
+    font-family: 'Poppins';
+    color: #FFFFFF;
+    cursor: default;
+    animation-duration: 2s;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.main {
+    background-color: #181818;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.cust-card {
+    text-decoration: none !important;
+    color: #414141;
+    font-weight: 600;
+    /*border: 2px solid #bebebe;*/
+    border-radius: 13px;
+    overflow: hidden;
+    background-color: #282828;
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.cust-card:hover {
+    border: 2px solid #3e3e3e;
+    color: #414141;
 }
 
-.App-link {
-    color: #61dafb;
+a {
+    text-decoration: none !important;
+    color: #414141 !important;
+    height: fit-content !important;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+a p:hover {
+    cursor: pointer;
+}
+
+.cust-card a:hover {
+    color: #4949c7 !important;
+}
+
+p {
+    margin: 5px !important;
+}
+
+.artistName {
+    z-index: 2;
+    position: absolute;
+    bottom: -90px;
+    right: 5px;
+    font-size: 20px;
+}
+
+img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.spotifyImg:hover {
+    cursor: pointer;
+}
+
+.artistNameP {
+    width: fit-content;
+}
+
+.playOverlay {
+    opacity: 0;
+    color: #4949c7;
+}
+
+.albumArtDiv:hover .playOverlay {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.btnGroup p:hover {
+    cursor: pointer;
+    background-color: #c30000 !important;
 }
