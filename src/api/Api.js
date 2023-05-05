@@ -1,5 +1,5 @@
 export async function getData(endpoint, method, body) {
-    const token = 'BQCxphuwLk6uChqhlFJJyg6in3Dnmeu7gBVzaeqOE7YbCEqqpLZwQZmz4hB84RbUWY9USfF96GQPb6oFu9dUPEtZqI-yNwNXLABESvTSAyG2imRBxf2-MWCDQo2y-twPSDH0SivWn6YvckQMTeJAcjiO5P_u2iUx5LIhurIf5g9Yt-j1IN-aOcYzvDy6NIuCp3XPvs3b23neFyAmB_Jt7H807aBdsj4eGbUSIUsQQuf1vo1G2DJ6Mfls3_YO8IVfHdJWukIhURvOSxAT65S0euX4EhcqDOn1nTVUGgf7J9X4wma2emkqtzzUARD9p2ZZPOdkFaXRCla7e-lhXdY1Rtod-TyaRH3lu4K-71mHeHq9F4I';
+    const token = 'BQAT_tZoS1TJ4-gzUnL4K7I7cK4loUkgLWY-5BgqL5FmjVIs4nWN34caMoRetz4uv1SAYzDTenOJlhHSNMxtIMexBl05FO_h5_FgB_r8HYc6dXz9v_IejCp4A7SNGzzAO6zaSMGxGy8P6J9JVzvYTZ5MonpoIaAq-nPh28d7chaFhO2Pfb7r7TeqN--JdB_7GUMdasKI4heLuPg37H-iwm4nMa6ndQ1gFscYuQYKzFG-WS4e9IVL9zbb390CBomIduUJ8_OVxeMkJE1HU-8iUNfM63NxyjjzDIDU10aw16WSEOwZvnRVzK0joJGTUXllL6FYD7lD1P6oG7_LadyqhfI3Zs2qxs71-eTsfoDczVVqIk0';
     return await fetch(`https://api.spotify.com/${endpoint}`, {
         headers: {
             Authorization: `Bearer ${token}`,

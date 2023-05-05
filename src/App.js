@@ -4,12 +4,14 @@ import TopArtists from "./components/TopArtists";
 import FollowedArtists from "./components/FollowedArtists";
 import TopTracks from "./components/TopTracks";
 import Overview from "./components/Overview";
+import Navbar from "./components/Navbar";
 
 function App() {
     const range = "short_term"
     const limit = 10
     return (<div className={'main'}>
-        <Overview/>
+        <Navbar/>
+        <Overview range={range} limit={limit}/>
         <TopTracks range={range} limit={limit}/>
         <TopArtists range={range} limit={limit}/>
         <FollowedArtists/>

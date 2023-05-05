@@ -10,23 +10,20 @@ class Overview extends Component {
     }
 
     componentDidMount() {
-        const getTopTracks = () => {
-            getData('v1/me/following?type=artist', 'GET').then(async r => {
+        const getTopTracks = async (range, limit) => {
+            await getData('v1/me/top/tracks?time_range=' + range + '&limit=' + limit, 'GET').then(async r => {
                 const trackTemp = await r.json();
                 // console.log(trackTemp.items)
-                // setTimeout(() => console.log(trackTemp), 2000)
-
-                const newState = [];
-                for (const tempKey in trackTemp.artists.items) {
-                    newState.push(trackTemp.artists.items[tempKey])
-                }
-
-                this.setState({
-                    topTrackData: newState,
-                })
+                // let newState = [];
+                // for (const tempKey in trackTemp.items) {
+                //     newState.push(trackTemp.items.artists.map(value => value.name))
+                // }
+                // this.setState({
+                //     topTrackData: newState
+                // })
             })
         }
-        getTopTracks()
+        getTopTracks(this.props.range, this.props.limit)
     }
 
     render() {
